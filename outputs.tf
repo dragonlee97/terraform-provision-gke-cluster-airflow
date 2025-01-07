@@ -12,11 +12,16 @@ output "project_id" {
 }
 
 output "kubernetes_cluster_name" {
-  value       = google_container_cluster.primary.name
+  value       = module.gke.gke_cluster_name
   description = "GKE Cluster Name"
 }
 
 output "kubernetes_cluster_host" {
-  value       = google_container_cluster.primary.endpoint
+  value       = module.gke.endpoint
   description = "GKE Cluster Host"
+}
+
+output "cloudsql_public_ip" {
+  value = module.cloudsql.db_public_ip
+  description = "The public IP address of the Cloud SQL instance"
 }
