@@ -1,7 +1,7 @@
 # Copyright (c) HashiCorp, Inc.
 # SPDX-License-Identifier: MPL-2.0
 provider "google" {
-  credentials = file("/Users/delongli/.config/gcloud/application_default_credentials.json")
+  credentials = file("")
   project = var.project_id
   region  = var.region
 }
